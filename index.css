@@ -6,6 +6,10 @@
       color: #2c3e1f;
       text-align: right;
     }
+    ::selection
+    {
+        background-color: #2e7d32;
+    }
 /* header start */
 
 
