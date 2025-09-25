@@ -1,415 +1,525 @@
 @import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap');
-      body {
-      margin: 0;
-      font-family: 'Tahoma', sans-serif;
-      background-color: #fdfcf8;
-      color: #2c3e1f;
-      text-align: right;
-    }
-/* header start */
 
-
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 50px 10%;
-      min-height: 100vh;
-      box-sizing: border-box;
-    }
-
-    .hero-text {
-      max-width: 50%;
-      text-align: right; 
-    }
-
-    .hero-text h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      color: #234d20;
-    }
-
-    .hero-text p {
-      font-size: 1.2rem;
-      margin-bottom: 25px;
-      color: #555;
-    }
-
-    .btn {
-      background: #234d20;
-      color: #fff;
-      padding: 12px 25px;
-      border-radius: 30px;
-      border: none;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #1a3616;
-    }
-
-    .hero-image {
-      flex-shrink: 0;
-    }
-
-    .hero-image img {
-      width: 400px;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 25%;
-    }
-
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-      .hero-text {
-        max-width: 100%;
-        margin-bottom: 30px;
-        text-align: center;
-      }
-      .hero-image img {
-        width: 90%;
-        height: auto;
-        border-radius: 20px;
-      }
-    }
-    /* header end */
-    .stats-section {
-    background: linear-gradient(135deg, #f8fff8 0%, #e8f5e9 100%);
-    padding: 50px 30px;
-    margin: 40px 0;
-    border-radius: 15px;
-    border-right: 5px solid #4caf50;
-    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.1);
+:root {
+    --primary: #1d7a59;
+    --primary-dark: #13553c;
+    --secondary: #46a37c;
+    --accent: #cdeac0;
+    --surface: #f5f7f4;
+    --surface-alt: #ffffff;
+    --text: #1f2d2a;
+    --muted: #6c7c75;
+    --rare: #d27d2d;
+    --shadow: 0 18px 35px rgba(19, 85, 60, 0.15);
 }
-/* main start  */
-/* 
-إحصاءات عن أنواع الزراعة المستخدمة في الأردن */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Alan Sans', 'Tahoma', sans-serif;
+    background-color: var(--surface);
+    color: var(--text);
+    line-height: 1.7;
+    direction: rtl;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font: inherit;
+}
+
+.hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(115deg, rgba(13, 50, 33, 0.88), rgba(13, 50, 33, 0.35)), url('img/14930906_l.avif');
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+}
+
+.hero-overlay {
+    max-width: 560px;
+    margin-inline-start: auto;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 28px;
+    padding: 46px 40px;
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    box-shadow: var(--shadow);
+}
+
+.hero-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.18);
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+}
+
+.hero-title {
+    font-size: clamp(2.4rem, 3vw, 3.2rem);
+    margin: 0 0 18px;
+    line-height: 1.25;
+}
+
+.hero-subtitle {
+    margin: 0 0 28px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1.1rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+.btn {
+    border: none;
+    border-radius: 999px;
+    padding: 12px 26px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--primary-dark);
+    box-shadow: 0 12px 20px rgba(205, 234, 192, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.btn-ghost {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border: 1px solid transparent;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(29, 122, 89, 0.25);
+}
+
+.hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.17);
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+}
+
+main {
+    padding: 60px 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+section {
+    background: var(--surface-alt);
+    border-radius: 28px;
+    padding: 48px 42px;
+    box-shadow: var(--shadow);
+}
+
 .section-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
 }
 
 .section-header h2 {
-    color: #2e7d32;
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    font-weight: 700;
+    margin: 0 0 12px;
+    font-size: clamp(1.9rem, 3vw, 2.4rem);
+    color: var(--primary-dark);
 }
 
 .section-header p {
-    color: #666;
-    font-size: 1.1rem;
+    margin: 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.action-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.chip {
+    border: 1px solid rgba(29, 122, 89, 0.25);
+    background: rgba(70, 163, 124, 0.08);
+    color: var(--primary-dark);
+    border-radius: 999px;
+    padding: 10px 18px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.chip:hover {
+    transform: translateY(-2px);
+    background: rgba(70, 163, 124, 0.18);
+}
+
+.chip.is-active {
+    background: var(--primary);
+    color: #ffffff;
 }
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
 }
 
 .stat-card {
-    background: white;
-    padding: 30px 20px;
-    border-radius: 12px;
+    background: linear-gradient(155deg, #ffffff 0%, #f2fbf4 100%);
+    border-radius: 22px;
+    padding: 32px 26px;
     text-align: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-    border-top: 4px solid #4caf50;
+    border: 1px solid rgba(29, 122, 89, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
 }
 
-.stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+.stat-card h3 {
+    font-size: 2.6rem;
+    margin: 0 0 12px;
+    color: var(--primary-dark);
 }
 
-.stat-number {
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: #2e7d32;
-    margin-bottom: 10px;
-}
-
-.stat-label {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 8px;
-}
-
-.stat-desc {
-    color: #666;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-/*  */
-    /* main end  */
-    /* 
-    قسم الري في الاردن وانواعه  
-     */
-
-    .irrigation-systems {
-    background: linear-gradient(135deg, #f0f8f0 0%, #e0f2e1 100%);
-    padding: 50px 30px;
-    margin: 40px 0;
-    border-radius: 15px;
-    border-left: 5px solid #2e7d32;
-    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.1);
-}
-
-.systems-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.system-item {
-    margin: 50px 0;
-}
-
-.system-content {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    min-height: 300px;
-}
-
-.system-item.reverse .system-content {
-    flex-direction: row-reverse;
-}
-
-.system-text {
-    flex: 1;
-    padding: 20px;
-}
-
-.system-text h3 {
-    color: #2e7d32;
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-.system-text p {
-    color: #555;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-.system-text ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.system-text li {
-    padding: 8px 0;
-    padding-right: 25px;
-    position: relative;
-    color: #333;
-    font-size: 1rem;
-}
-
-.system-text li:before {
-    content: "✓";
-    color: #4caf50;
-    font-weight: bold;
-    position: absolute;
-    right: 0;
-}
-
-.system-image {
-    flex: 1;
-    text-align: center;
-}
-
-.system-image img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.system-image img:hover {
-    transform: scale(1.03);
-}
-
-/* التصميم للموبايل */
-@media (max-width: 768px) {
-    .system-content {
-        flex-direction: column !important;
-        text-align: center;
-    }
-    
-    .system-item.reverse .system-content {
-        flex-direction: column !important;
-    }
-    
-    .system-text {
-        padding: 10px;
-    }
-}
-
-/*  المحاصيل المتوفره في الاردن*/
-.crops-section {
-    background: linear-gradient(135deg, #fff8f8 0%, #ffebee 100%);
-    padding: 50px 30px;
-    margin: 40px 0;
-    border-radius: 15px;
-    border: 2px dashed #f44336;
-    box-shadow: 0 5px 15px rgba(244, 67, 54, 0.1);
-}
-
-.crops-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
-.crops-category {
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-}
-
-.crops-category.available {
-    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-    border-right: 4px solid #4caf50;
-}
-
-.crops-category.rare {
-    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
-    border-right: 4px solid #f44336;
-}
-
-.category-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid rgba(0,0,0,0.1);
-}
-
-.category-header h3 {
-    color: #333;
-    font-size: 1.4rem;
+.stat-card p {
     margin: 0;
+    color: var(--muted);
+    font-size: 1rem;
 }
 
-.count-badge {
-    background: rgba(255,255,255,0.7);
-    padding: 5px 12px;
-    border-radius: 20px;
+.stat-card.is-hidden {
+    display: none;
+}
+
+.stat-card.card-highlight {
+    background: linear-gradient(155deg, rgba(70, 163, 124, 0.1), rgba(205, 234, 192, 0.6));
+    box-shadow: 0 20px 38px rgba(29, 122, 89, 0.2);
+    transform: translateY(-8px);
+}
+
+.systems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.system-card {
+    border: 1px solid rgba(29, 122, 89, 0.1);
+    border-radius: 24px;
+    padding: 30px 24px;
+    background: linear-gradient(160deg, #ffffff 0%, #eef7f2 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.system-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 30px rgba(29, 122, 89, 0.18);
+}
+
+.system-card.is-hidden {
+    display: none;
+}
+
+.system-icon {
+    font-size: 2.2rem;
+}
+
+.link-btn {
+    align-self: flex-start;
+    background: none;
+    border: none;
+    color: var(--primary);
     font-weight: 600;
-    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0;
+    margin-top: auto;
+    display: inline-flex;
+    gap: 6px;
+}
+
+.link-btn::after {
+    content: '\2197';
+    font-size: 0.95rem;
+}
+
+.link-btn:hover {
+    color: var(--primary-dark);
+}
+
+.system-card.highlighted {
+    box-shadow: 0 22px 36px rgba(29, 122, 89, 0.24);
+    transform: translateY(-10px);
 }
 
 .crops-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
 }
 
 .crop-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0,0,0,0.05);
+    background: linear-gradient(150deg, #ffffff 0%, #f9fcff 100%);
+    border-radius: 22px;
+    padding: 26px 22px;
+    border: 1px solid rgba(29, 122, 89, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .crop-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.crop-icon {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    transform: translateY(-5px);
+    box-shadow: 0 16px 26px rgba(31, 45, 42, 0.12);
 }
 
 .crop-card h4 {
-    color: #333;
-    margin-bottom: 8px;
-    font-size: 1.1rem;
+    margin: 0;
+    color: var(--primary-dark);
 }
 
-.crop-card p {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-    line-height: 1.4;
+.crop-card.rare {
+    border-color: rgba(210, 125, 45, 0.35);
+    background: linear-gradient(160deg, rgba(210, 125, 45, 0.12), #ffffff 100%);
 }
 
 .season-tag {
-    background: #4caf50;
-    color: white;
-    padding: 3px 10px;
-    border-radius: 15px;
-    font-size: 0.8rem;
+    align-self: flex-start;
+    background: rgba(70, 163, 124, 0.15);
+    color: var(--primary-dark);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.9rem;
     font-weight: 600;
 }
 
-.rarity-tag {
-    padding: 3px 10px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: white;
+.plants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
 }
 
-.rarity-tag.high { background: #f44336; }
-.rarity-tag.medium { background: #ff9800; }
-.rarity-tag.low { background: #ffc107; color: #333; }
-
-.crops-stats {
+.plant-card {
+    background: linear-gradient(150deg, #ffffff 0%, #f1f7f4 100%);
+    border-radius: 22px;
+    padding: 24px 22px;
+    border: 1px solid rgba(29, 122, 89, 0.08);
     display: flex;
-    justify-content: space-around;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 30px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    flex-direction: column;
+    gap: 10px;
 }
 
-.stat-item {
+.availability {
+    align-self: flex-start;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.availability.is-common {
+    background: rgba(70, 163, 124, 0.15);
+    color: var(--primary-dark);
+}
+
+.availability.is-rare {
+    background: rgba(210, 125, 45, 0.2);
+    color: var(--rare);
+}
+
+.vertical-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+}
+
+.vertical-step {
+    padding: 26px 22px;
+    border-radius: 22px;
+    background: linear-gradient(150deg, #ffffff 0%, #eef7f2 100%);
+    border: 1px solid rgba(29, 122, 89, 0.08);
+}
+
+.vertical-step h4 {
+    margin: 0 0 12px;
+    color: var(--primary-dark);
+}
+
+.vertical-step p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.diseases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+}
+
+.disease-card {
+    padding: 26px 22px;
+    border-radius: 22px;
+    background: linear-gradient(150deg, #ffffff 0%, #fff7f2 100%);
+    border: 1px solid rgba(210, 125, 45, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.disease-card h4 {
+    margin: 0;
+    color: var(--rare);
+}
+
+.disease-card p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.disease-meta {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.message-panel {
+    position: fixed;
+    inset-inline-end: 40px;
+    inset-block-end: 40px;
+    max-width: 320px;
+    background: var(--primary);
+    color: #ffffff;
+    padding: 18px 22px;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+.message-panel.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.site-footer {
+    margin: 60px 8% 40px;
+    padding: 28px 32px;
+    background: #0d3221;
+    color: rgba(255, 255, 255, 0.78);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
-.stat-value {
-    font-size: 2rem;
-    font-weight: 800;
-    color: #f44336;
+.site-footer p {
+    margin: 0;
 }
 
-.stat-label {
-    color: #666;
-    font-size: 0.9rem;
-    margin-top: 5px;
+.fade-in {
+    animation: fadeInUp 0.45s ease;
 }
 
-/* التصميم للموبايل */
-@media (max-width: 768px) {
-    .crops-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
     }
-    
-    .crops-grid {
-        grid-template-columns: 1fr;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-    
-    .crops-stats {
+}
+
+@media (max-width: 900px) {
+    .hero {
+        padding: 60px 6%;
+        min-height: 75vh;
+    }
+
+    .hero-overlay {
+        margin-inline-start: 0;
+        max-width: 100%;
+    }
+
+    main {
+        padding: 50px 6%;
+        gap: 60px;
+    }
+
+    section {
+        padding: 38px 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .hero-overlay {
+        padding: 34px 26px;
+    }
+
+    .hero-actions {
         flex-direction: column;
-        gap: 20px;
+        align-items: stretch;
+    }
+
+    .chip {
+        width: 100%;
+        text-align: center;
+    }
+
+    .message-panel {
+        inset-inline-end: 16px;
+        inset-block-end: 16px;
+        max-width: calc(100% - 32px);
+    }
+
+    .site-footer {
+        margin: 40px 6% 30px;
+        padding: 24px;
     }
 }
