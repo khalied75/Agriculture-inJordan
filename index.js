@@ -1,100 +1,61 @@
-let highlightsActive = false;
-let messageTimer = null;
+  // عناصر القائمة
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('overlay');
+        const closeBtn = document.getElementById('closeBtn');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
 
-document.addEventListener('DOMContentLoaded', () => {
-    filterSystems('all');
-    const systemCards = document.querySelectorAll('.system-card');
-    systemCards.forEach(card => {
-        card.classList.add('fade-in');
-        setTimeout(() => card.classList.remove('fade-in'), 500);
-    });
-});
+        // فتح القائمة
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
 
-function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-}
-
-function toggleHighlights() {
-    highlightsActive = !highlightsActive;
-    const statCards = document.querySelectorAll('.stat-card');
-
-    statCards.forEach(card => {
-        card.classList.toggle('card-highlight', highlightsActive);
-        if (highlightsActive) {
-            card.classList.add('fade-in');
-            setTimeout(() => card.classList.remove('fade-in'), 450);
+        // إغلاق القائمة
+        function closeMenu() {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
         }
-    });
 
-    showMessage(highlightsActive
-        ? 'تم إبراز المؤشرات الأكثر تأثيراً هذا الشهر.'
-        : 'تمت العودة إلى عرض المؤشرات بحالتها الأساسية.');
-}
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
 
-function filterSystems(filter) {
-    const chips = document.querySelectorAll('.chip[data-filter]');
-    chips.forEach(chip => {
-        chip.classList.toggle('is-active', chip.dataset.filter === filter);
-    });
+        // إغلاق القائمة عند النقر على رابط
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
 
-    const applyFilter = (element) => {
-        if (!element) return;
-        const category = element.dataset.category;
-        const match = filter === 'all' || category === filter;
-
-        element.classList.toggle('is-hidden', !match);
-        if (match) {
-            element.classList.add('fade-in');
-            setTimeout(() => element.classList.remove('fade-in'), 450);
+        // التمرير السلس
+        function scrollToContent() {
+            document.querySelector('.sections-grid').scrollIntoView({
+                behavior: 'smooth'
+            });
         }
-    };
+        
+        // التنقل السلس للروابط
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    // إغلاق القائمة المتنقلة إذا كانت مفتوحة
+                    if (window.innerWidth <= 768) {
+                        closeMenu();
+                    }
+                    
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
-    document.querySelectorAll('.stat-card').forEach(applyFilter);
-    document.querySelectorAll('.system-card').forEach(applyFilter);
-
-    const filterMessages = {
-        all: 'يتم عرض كل الأنماط الزراعية والحلول الداعمة حالياً.',
-        field: 'عرض خاص بالزراعة الحقلية في الأغوار والسهول.',
-        protected: 'عرض الأنشطة داخل البيوت المحمية والمشاتل.',
-        innovation: 'عرض التقنيات المبتكرة مثل الزراعة المائية والطاقة الشمسية.',
-        desert: 'عرض المشروعات التوسعية في المناطق الصحراوية.'
-    };
-
-    showMessage(filterMessages[filter] || 'تم تحديث العرض حسب اختيارك.');
-}
-
-function highlightCard(button) {
-    const card = button.closest('.system-card');
-    if (!card) return;
-
-    const isHighlighted = card.classList.toggle('highlighted');
-    showMessage(isHighlighted
-        ? 'تمت إضافة هذا الحل إلى قائمة المتابعة.'
-        : 'تمت إزالة هذا الحل من قائمة المتابعة.');
-}
-
-function simulateAlert() {
-    const localStockDays = Math.floor(Math.random() * 6) + 5; // 5-10 أيام
-    const coverage = Math.floor(Math.random() * 20) + 70; // 70-89%
-    const message = 'المخزون المحلي يغطي ' + coverage + '% من الطلب خلال ' + localStockDays + ' أيام قادمة.';
-    showMessage(message);
-}
-
-function showMessage(text) {
-    const panel = document.getElementById('message-panel');
-    if (!panel) return;
-
-    panel.textContent = text;
-    panel.classList.add('visible');
-
-    if (messageTimer) {
-        clearTimeout(messageTimer);
-    }
-
-    messageTimer = setTimeout(() => {
-        panel.classList.remove('visible');
-    }, 4200);
-}
+        // إغلاق القائمة عند تغيير حجم الشاشة
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });

@@ -3,201 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questions</title>
+    <title>Jordanian food security</title>
     <link rel="stylesheet" href="./index.css">
-    <link rel="icon" href="img/handplanting_part_4138.png">
+    <!-- icon -->
+    <link rel="icon" href="img/WhatsApp Image 2025-09-25 at 23.25.05_97f73a6b.jpg">
 </head>
 <body>
-    <header class="hero" id="home">
-        <div class="hero-overlay">
-            <span class="hero-kicker">استدامة الغذاء الوطني</span>
-            <h1 class="hero-title">نبني منظومة زراعية مرنة تدعم أمن الأردن الغذائي</h1>
-            <p class="hero-subtitle">نوفّر لوحة بيانات تتابع أنواع الزراعة، نظم الري، الزراعة العمودية، وصحة النبات لضمان وفرة الغذاء واستدامة الموارد.</p>
-            <div class="hero-actions">
-                <button class="btn btn-primary" onclick="scrollToSection('agri-types')">مؤشرات الزراعة</button>
-                <button class="btn btn-outline" onclick="scrollToSection('vertical-farming')">الزراعة العمودية</button>
-                <button class="btn btn-ghost" onclick="toggleHighlights()">إبراز النجاحات</button>
+  
+   <nav class="navbar">
+        <div class="nav-container">
+            
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#agriculture">types of agriculture</a></li>
+                <li><a href="#water">Irrigation systems in Jordan</a></li>
+                <li><a href="#technology">Available or rare crops</a></li>
+                <li><a href="#contact">Available or rare plants</a></li>
+                <li><a href="#contact">Vertical farming</a></li>
+                <li><a href="#contact">Plant diseases</a></li>
+
+            </ul>
+            <div class="logo">
+                <img src="img/WhatsApp Image 2025-09-25 at 23.25.05_97f73a6b.jpg" alt="">
+              
             </div>
-            <div class="hero-pill">آخر تحديث للبيانات اليوم · المصدر: وزارة الزراعة</div>
+            <!-- زر الهامبرغر -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <section class="stats-section" id="agri-types">
-            <div class="section-header">
-                <h2>أنماط الزراعة في الأردن</h2>
-                <p>تجمع المنصة بيانات الحقول المكشوفة، الزراعة المحمية، التقنيات المبتكرة، والتوسع الصحراوي لمتابعة مساهمة كل نمط في الأمن الغذائي.</p>
+    <!-- قائمة الموبايل -->
+    <div class="overlay" id="overlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" id="closeBtn">×</button>
+        <ul class="mobile-links">
+               <li><a href="#home">Home</a></li>
+                <li><a href="">types of agriculture</a></li>
+                <li><a href="">Irrigation systems in Jordan</a></li>
+                <li><a href="">Available or rare crops</a></li>
+                <li><a href="">Available or rare plants</a></li>
+                <li><a href="">Vertical farming</a></li>
+                <li><a href="">Plant diseases</a></li>
+        </ul>
+    </div>
+
+    <!-- الهيرو سيكشن -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>JORDANIAN FOOD SECURITY</h1>
+            <p>Ensuring sustainable food production and availability for future generations</p>
+            <button class="btn" onclick="scrollToContent()">Explore Our Initiatives</button>
+        </div>
+    </section>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="container">
+        <div class="sections-grid">
+            <div class="section-card" id="water">
+                <h3>Water Management</h3>
+                <p>Efficient irrigation systems and water conservation techniques to optimize usage in Jordan's arid regions. Advanced drip irrigation and smart water management solutions.</p>
             </div>
-            <div class="action-bar">
-                <button class="chip is-active" data-filter="all" onclick="filterSystems('all')">كل الأنماط</button>
-                <button class="chip" data-filter="field" onclick="filterSystems('field')">الزراعة الحقلية</button>
-                <button class="chip" data-filter="protected" onclick="filterSystems('protected')">الزراعة المحمية</button>
-                <button class="chip" data-filter="innovation" onclick="filterSystems('innovation')">الابتكار الزراعي</button>
-                <button class="chip" data-filter="desert" onclick="filterSystems('desert')">الزراعة الصحراوية</button>
-                <button class="chip" onclick="simulateAlert()">تقدير الاحتياج اليومي</button>
+            
+            <div class="section-card" id="agriculture">
+                <h3>Agriculture</h3>
+                <p>Sustainable farming practices and crop diversification in Jordan's unique climate conditions. Innovative approaches to enhance food production and security.</p>
             </div>
-            <div class="stats-grid">
-                <article class="stat-card" data-category="field">
-                    <h3>44%</h3>
-                    <p>حصة الزراعة الحقلية في الأغوار والسهول من إجمالي الإنتاج النباتي الوطني.</p>
-                </article>
-                <article class="stat-card" data-category="protected">
-                    <h3>31%</h3>
-                    <p>إسهام البيوت المحمية والمشاتل في توفير الخضروات طوال العام.</p>
-                </article>
-                <article class="stat-card" data-category="innovation">
-                    <h3>18%</h3>
-                    <p>نسبة المزارع التي تعتمد الزراعة المائية والهيدروبونيك ذات الكفاءة العالية.</p>
-                </article>
-                <article class="stat-card" data-category="desert">
-                    <h3>7%</h3>
-                    <p>مشروعات الزراعة الصحراوية في وادي رم والمناطق الجافة قيد التوسع.</p>
-                </article>
+            
+            <div class="section-card" id="technology">
+                <h3>Technology</h3>
+                <p>Modern agricultural technologies and innovation in food production. Implementation of precision farming and digital solutions for sustainable agriculture.</p>
             </div>
+        </div>
+
+        <!-- قسم الاتصال -->
+        <section class="contact-section" id="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for more information about Jordanian Food Security initiatives</p>
         </section>
+    </div>
 
-        <section class="systems-section" id="irrigation">
-            <div class="section-header">
-                <h2>نظم الري المستخدمة في الأردن</h2>
-                <p>حلول متدرجة للري الذكي تقلل الفاقد وتدعم المزارعين في مختلف المناطق المناخية.</p>
-            </div>
-            <div class="systems-grid">
-                <article class="system-card" data-category="field">
-                    <div class="system-icon">💧</div>
-                    <h3>الري السطحي المحسّن</h3>
-                    <p>قنوات مبطنة وأجهزة قياس تدفق تقلل فاقد المياه في الحقول المفتوحة بنسبة 25٪.</p>
-                    <button class="link-btn" onclick="highlightCard(this)">إضافة لخطة الدعم</button>
-                </article>
-                <article class="system-card" data-category="protected">
-                    <div class="system-icon">🌱</div>
-                    <h3>التنقيط داخل البيوت المحمية</h3>
-                    <p>شبكات حساسات تربط الرطوبة بالتغذية الورقية مع تنبيه فوري لأي خلل.</p>
-                    <button class="link-btn" onclick="highlightCard(this)">إضافة لخطة الدعم</button>
-                </article>
-                <article class="system-card" data-category="innovation">
-                    <div class="system-icon">⚡</div>
-                    <h3>محطات الري بالطاقة الشمسية</h3>
-                    <p>مضخات هجينة بالطاقة النظيفة توفر 40٪ من تكلفة التشغيل السنوية.</p>
-                    <button class="link-btn" onclick="highlightCard(this)">إضافة لخطة الدعم</button>
-                </article>
-                <article class="system-card" data-category="desert">
-                    <div class="system-icon">🏜️</div>
-                    <h3>الري بالرذاذ منخفض الضغط</h3>
-                    <p>مصمم للمشروعات الصحراوية مع ضبط أوتوماتيكي لحركة الهواء ودرجة الملوحة.</p>
-                    <button class="link-btn" onclick="highlightCard(this)">إضافة لخطة الدعم</button>
-                </article>
-            </div>
-        </section>
-
-        <section class="crops-section" id="crops">
-            <div class="section-header">
-                <h2>محاصيل متوفرة ونادرة</h2>
-                <p>تنوع المحاصيل يضمن مرونة السلة الغذائية ويخلق فرصاً للتصدير والأسواق المحلية.</p>
-            </div>
-            <div class="crops-grid">
-                <article class="crop-card">
-                    <h4>القمح القاسي</h4>
-                    <span class="season-tag">موسم الربيع</span>
-                    <p>يزيد مخزون القمح الاستراتيجي ويغطي 30٪ من الاستهلاك المحلي.</p>
-                </article>
-                <article class="crop-card">
-                    <h4>الزيتون الرومي</h4>
-                    <span class="season-tag">موسم الخريف</span>
-                    <p>محصول دائم يدعم الصناعات الغذائية ويعزز فرص التصدير.</p>
-                </article>
-                <article class="crop-card rare">
-                    <h4>الزعفران الأردني</h4>
-                    <span class="season-tag">مواسم محددة</span>
-                    <p>محصول نادر في المرتفعات يتطلب رعاية دقيقة ويوفر قيمة اقتصادية عالية.</p>
-                </article>
-                <article class="crop-card rare">
-                    <h4>الكمأة الصحراوية</h4>
-                    <span class="season-tag">شتاء ممطر</span>
-                    <p>مصدر غذائي نادر في البادية تراقبه الجهات المختصة للحفاظ على التوازن البيئي.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="plants-section" id="plants">
-            <div class="section-header">
-                <h2>نباتات طبية وعطرية</h2>
-                <p>الموارد النباتية المحلية بين أنواع متاحة تجارياً وأخرى نادرة تتطلب حماية وإكثاراً مخبرياً.</p>
-            </div>
-            <div class="plants-grid">
-                <article class="plant-card">
-                    <h4>النعناع الجبلي</h4>
-                    <p>متوفر في محافظات الشمال ويستخدم في الصناعات الدوائية الخفيفة.</p>
-                    <span class="availability is-common">متاح</span>
-                </article>
-                <article class="plant-card">
-                    <h4>الميرمية البلدية</h4>
-                    <p>نبات شائع في الزراعة المنزلية مع برامج تدريبية للتجفيف والتعبئة.</p>
-                    <span class="availability is-common">متاح</span>
-                </article>
-                <article class="plant-card">
-                    <h4>الشيح الصحراوي</h4>
-                    <p>نبات نادر في وادي عربة يُستخدم في أبحاث علاج أمراض الجهاز الهضمي.</p>
-                    <span class="availability is-rare">نادر</span>
-                </article>
-                <article class="plant-card">
-                    <h4>الخزامى الأردنية</h4>
-                    <p>تجارب محدودة لزراعتها بهدف إنتاج الزيوت العطرية عالية القيمة.</p>
-                    <span class="availability is-rare">نادر</span>
-                </article>
-            </div>
-        </section>
-
-        <section class="vertical-section" id="vertical-farming">
-            <div class="section-header">
-                <h2>الزراعة العمودية</h2>
-                <p>حل واعد لتعظيم إنتاج الخضروات في المدن وتقليل استهلاك الماء والطاقة.</p>
-            </div>
-            <div class="vertical-grid">
-                <article class="vertical-step">
-                    <h4>بيوت ذكية متعددة الطوابق</h4>
-                    <p>أنظمة تحكم في الضوء والمناخ تضاعف الإنتاج في مساحة لا تتجاوز 120 متراً مربعاً.</p>
-                </article>
-                <article class="vertical-step">
-                    <h4>حلقة القيمة المضافة</h4>
-                    <p>التعبئة والتوزيع المحلي خلال ساعات يضمن خضروات طازجة للمراكز الحضرية.</p>
-                </article>
-                <article class="vertical-step">
-                    <h4>شراكات ناشئة</h4>
-                    <p>استثمارات مشتركة بين القطاعين العام والخاص تدعم تدريب الشباب على التقنيات الحديثة.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="diseases-section" id="diseases">
-            <div class="section-header">
-                <h2>أمراض النبات ومكافحتها</h2>
-                <p>متابعة دقيقة للأمراض الأكثر انتشاراً مع توصيات فورية للحد من خسائر الإنتاج.</p>
-            </div>
-            <div class="diseases-grid">
-                <article class="disease-card">
-                    <h4>البياض الدقيقي</h4>
-                    <p>يؤثر على العنب والخضروات، ويُعالج برشات حيوية وخطط ري متوازنة.</p>
-                    <div class="disease-meta">درجة الخطورة: متوسطة</div>
-                </article>
-                <article class="disease-card">
-                    <h4>ذبابة البحر المتوسط</h4>
-                    <p>تستهدف ثمار الحمضيات، وتتم مكافحتها بالمصائد الصفراء وبرامج الرش الموجه.</p>
-                    <div class="disease-meta">درجة الخطورة: مرتفعة</div>
-                </article>
-                <article class="disease-card">
-                    <h4>صدأ القمح</h4>
-                    <p>بؤر محدودة في شمال المملكة تُعالج بزراعة أصناف مقاومة وتدريب المزارعين.</p>
-                    <div class="disease-meta">درجة الخطورة: تحت المراقبة</div>
-                </article>
-            </div>
-        </section>
-    </main>
-
-    <div class="message-panel" id="message-panel" role="status" aria-live="polite"></div>
-
-    <footer class="site-footer">
-        <p>© 2025 منصة الأمن الغذائي الأردني · بيانات رسمية وتقارير مجتمعية.</p>
+    <!-- الفوتر -->
+    <footer class="footer">
+        <p>&copy; 2024 Jordanian Food Security. All rights reserved.</p>
     </footer>
+   
 
     <script src="index.js"></script>
 </body>
