@@ -1,14 +1,15 @@
-  // عناصر القائمة
+ // عناصر القائمة
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
         const overlay = document.getElementById('overlay');
         const closeBtn = document.getElementById('closeBtn');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
+        const mobileLinks = document.querySelectorAll('.mobile-links a');
 
         // فتح القائمة
         hamburger.addEventListener('click', () => {
             mobileMenu.classList.add('active');
             overlay.classList.add('active');
+            hamburger.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
 
@@ -16,6 +17,7 @@
         function closeMenu() {
             mobileMenu.classList.remove('active');
             overlay.classList.remove('active');
+            hamburger.classList.remove('active');
             document.body.style.overflow = 'auto';
         }
 
@@ -57,5 +59,17 @@
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
                 closeMenu();
+            }
+        });
+
+        // تأثيرات scroll للنافبار
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(46, 125, 50, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.background = '';
+                navbar.style.backdropFilter = '';
             }
         });
