@@ -1,0 +1,269 @@
+ .hero.main-header {
+            background: linear-gradient(135deg, #8B0000 0%, #B22222 50%, #DC143C 100%);
+            color: white;
+            text-align: center;
+              padding: 230px 2rem 100px;
+
+            box-shadow: 0 8px 30px rgba(139, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero.main-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M20,20 Q50,10 80,20 T100,50 T80,80 T50,90 T20,80 T0,50 T20,20 Z" fill="white"/></svg>');
+            background-size: 200px 200px;
+            animation: float 20s infinite linear;
+        }
+        
+        .hero.main-header h1 {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            animation: fadeInDown 1s ease-out;
+            position: relative;
+        }
+        
+        .hero.main-header .tagline {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            margin-bottom: 10px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+            position: relative;
+        }
+        /* header end */
+           .hero-section {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(45deg, #fff0f0, #ffe6e6);
+        }
+        
+        .hero-content h2 {
+            font-size: 3rem;
+            color: #8B0000;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out 0.6s both;
+            text-shadow: 2px 2px 4px rgba(139, 0, 0, 0.1);
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            color: #666;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+        
+        /* Diseases Grid */
+        .diseases-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        
+        .diseases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .disease-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(139, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid transparent;
+        }
+        
+        .disease-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #8B0000, #DC143C);
+        }
+        
+        .disease-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(139, 0, 0, 0.2);
+            border-color: #DC143C;
+        }
+        
+        .disease-icon {
+            font-size: 4.5rem;
+            margin-bottom: 25px;
+            display: block;
+            transition: transform 0.3s ease;
+            filter: drop-shadow(2px 2px 4px rgba(139, 0, 0, 0.3));
+        }
+        
+        .disease-card:hover .disease-icon {
+            transform: scale(1.2) rotate(-5deg);
+        }
+        
+        .disease-card h3 {
+            color: #8B0000;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .disease-card p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+        
+        /* Symptoms Section */
+        .symptoms-section {
+            background: linear-gradient(135deg, #8B0000 0%, #B22222 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .symptoms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 50px auto 0;
+        }
+        
+        .symptom-item {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .symptom-item:hover {
+            transform: translateY(-8px);
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .symptom-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #FFD700;
+        }
+        
+        /* Prevention Section */
+        .prevention-section {
+            background: linear-gradient(45deg, #f8f8f8, #ffffff);
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .prevention-steps {
+            max-width: 1000px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .prevention-step {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(139, 0, 0, 0.1);
+            border-left: 5px solid #8B0000;
+        }
+        .footer {
+  background: #1a1a1a;
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 2rem;
+  /* margin-top: 5rem; */
+}
+
+.footer p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(50px) translateY(20px); }
+            100% { transform: translateX(0) translateY(0); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .disease-card {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .disease-card:nth-child(1) { animation-delay: 0.1s; }
+        .disease-card:nth-child(2) { animation-delay: 0.2s; }
+        .disease-card:nth-child(3) { animation-delay: 0.3s; }
+        .disease-card:nth-child(4) { animation-delay: 0.4s; }
+        .disease-card:nth-child(5) { animation-delay: 0.5s; }
+        .disease-card:nth-child(6) { animation-delay: 0.6s; }
+        
+        /* Emergency Alert */
+        .emergency-alert {
+            background: linear-gradient(45deg, #DC143C, #FF4500);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 800px;
+            animation: pulse 2s infinite;
+            box-shadow: 0 5px 15px rgba(220, 20, 60, 0.4);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-header h1 { font-size: 2.5rem; }
+            .hero-content h2 { font-size: 2rem; }
+            .disease-icon { font-size: 3.5rem; }
+        }

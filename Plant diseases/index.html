@@ -12,14 +12,134 @@
 </head>
 
 <body>
+   
     <div data-component="navbar"></div>
 
-    <section class="hero" id="home">
+
+        <!-- الهيرو سيكشن -->
+    <section class="hero   main-header" id="home" >
         <div class="hero-content">
-            <h1>JORDANIAN FOOD SECURITY</h1>
-            <p>Ensuring sustainable food production and availability for future generations in the Hashemite Kingdom of Jordan</p>
+            <h1>Plant Diseases Management</h1>
+            <p>Identification, Prevention & Treatment for Jordanian Agriculture</p>
         </div>
     </section>
+
+    <!-- main -->
+     
+    <!-- Emergency Alert -->
+    <div class="emergency-alert">
+        <h3>🚨 Early Detection Saves Crops! Report suspicious symptoms immediately.</h3>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2>Protecting Jordan's Agriculture</h2>
+            <p>
+                Plant diseases threaten food security and agricultural sustainability. 
+                Early identification and proper management are crucial for protecting 
+                Jordan's vital crops from devastating outbreaks.
+            </p>
+        </div>
+    </section>
+
+    <!-- Diseases Grid -->
+    <section class="diseases-container">
+        <div class="diseases-grid">
+            <div class="disease-card" onclick="showDiseaseInfo('fungal')">
+                <span class="disease-icon">🍄</span>
+                <h3>Fungal Diseases</h3>
+                <p>Powdery mildew, rust, blight, and other fungal infections</p>
+            </div>
+            
+            <div class="disease-card" onclick="showDiseaseInfo('bacterial')">
+                <span class="disease-icon">🦠</span>
+                <h3>Bacterial Infections</h3>
+                <p>Blight, spots, and wilts caused by bacterial pathogens</p>
+            </div>
+            
+            <div class="disease-card" onclick="showDiseaseInfo('viral')">
+                <span class="disease-icon">🦠</span>
+                <h3>Viral Diseases</h3>
+                <p>Mosaic viruses, leaf curl, and systemic infections</p>
+            </div>
+            
+            <div class="disease-card" onclick="showDiseaseInfo('pests')">
+                <span class="disease-icon">🐛</span>
+                <h3>Pest-Related</h3>
+                <p>Damage from insects leading to secondary infections</p>
+            </div>
+            
+            <div class="disease-card" onclick="showDiseaseInfo('nutritional')">
+                <span class="disease-icon">🥬</span>
+                <h3>Nutritional Disorders</h3>
+                <p>Deficiencies and imbalances affecting plant health</p>
+            </div>
+            
+            <div class="disease-card" onclick="showDiseaseInfo('environmental')">
+                <span class="disease-icon">🌡️</span>
+                <h3>Environmental Stress</h3>
+                <p>Drought, heat, and other abiotic factors</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Symptoms Section -->
+    <section class="symptoms-section">
+        <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Common Symptoms</h2>
+        <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 40px;">
+            Early warning signs of plant diseases
+        </p>
+        
+        <div class="symptoms-grid">
+            <div class="symptom-item">
+                <h4>Leaf Spots & Discoloration</h4>
+                <p>Yellowing, browning, or unusual patterns on leaves</p>
+            </div>
+            <div class="symptom-item">
+                <h4>Wilting & Drooping</h4>
+                <p>Loss of turgor pressure and plant structure</p>
+            </div>
+            <div class="symptom-item">
+                <h4>Stunted Growth</h4>
+                <p>Reduced development and smaller yields</p>
+            </div>
+            <div class="symptom-item">
+                <h4>Mold & Mildew</h4>
+                <p>Fungal growth on plant surfaces</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prevention Section -->
+    <section class="prevention-section">
+        <h2 style="color: #8B0000; font-size: 2.5rem; margin-bottom: 10px;">Prevention Strategies</h2>
+        <p style="color: #666; font-size: 1.2rem; margin-bottom: 40px;">
+            Proactive measures to protect your crops
+        </p>
+        
+        <div class="prevention-steps">
+            <div class="prevention-step">
+                <h4>🌱 Crop Rotation</h4>
+                <p>Prevent soil-borne diseases through strategic planting</p>
+            </div>
+            <div class="prevention-step">
+                <h4>💧 Proper Irrigation</h4>
+                <p>Avoid overwatering and fungal growth</p>
+            </div>
+            <div class="prevention-step">
+                <h4>🔍 Regular Monitoring</h4>
+                <p>Early detection through frequent inspections</p>
+            </div>
+            <div class="prevention-step">
+                <h4>🧼 Sanitation</h4>
+                <p>Clean tools and equipment to prevent spread</p>
+            </div>
+        </div>
+    </section>
+     <footer class="footer">
+        <p>© 2024 Jordanian Food Security. All rights reserved.</p>
+    </footer>
 </body>
 </html>
 
