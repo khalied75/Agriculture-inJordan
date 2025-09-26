@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,54 +7,16 @@
         <!-- icon -->
      <link rel="icon" href="../img/logo.png">
     <!-- css -->
-    <link rel="stylesheet" href="./index.css">
+     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="../main.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="../components/navbar.js" defer data-base=".."></script>
 </head>
+
 <body>
-   <!-- الناف بار - إنجليزية فقط وإزالة النص بجانب الأيقونة -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo">
-                <!-- هنا يمكنك إضافة صورتك -->
-                <div class="logo-icon" style="display: flex; align-items: center;">
-                    <img src="../img/logo.png" alt="JFS Icon" style="width: 80px">
-                </div>
-                <div class="logo-text"></div> <!-- نص مخفي -->
-            </a>
-            
-            <ul class="nav-links">
-                <li><a href="../types of agriculture used in Jordan/index.html">Agriculture Stats</a></li>
-                <li><a href="../Irrigation systems  in Jordan/index.html">Irrigation Systems</a></li>
-                <li><a href="../Available or rare crops/index.html">Crops</a></li>
-                <li><a href="../Available or rare plants/index.html">Plants</a></li>
-                <li><a href="../Vertical farming/index.html">Vertical Farming</a></li>
-                <li><a href="../Plant diseases/index.html">Plant Diseases</a></li>
-            </ul>
-            
-            <!-- زر الهامبرغر -->
-            <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+    <div data-component="navbar"></div>
 
-    <!-- قائمة الموبايل -->
-    <div class="overlay" id="overlay"></div>
-    <div class="mobile-menu" id="mobileMenu">
-        <ul class="mobile-links">
-                <li><a href="../types of agriculture used in Jordan/index.html">Agriculture Stats</a></li>
-                <li><a href="../Irrigation systems  in Jordan/index.html">Irrigation Systems</a></li>
-                <li><a href="../Available or rare crops/index.html">Crops</a></li>
-                <li><a href="../Available or rare plants/index.html">Plants</a></li>
-                <li><a href="../Vertical farming/index.html">Vertical Farming</a></li>
-                <li><a href="../Plant diseases/index.html">Plant Diseases</a></li>
-        </ul>
-    </div>
 
-        <!-- الهيرو سيكشن -->
     <section class="hero" id="home" style="background: var(--water-gradient);">
         <div class="hero-content">
             <h1>Irrigation Systems in Jordan</h1>
@@ -62,10 +24,9 @@
         </div>
     </section>
 
-    <!-- المحتوى الرئيسي -->
     <div class="container">
         <div class="systems-grid">
-            <!-- الري السطحي -->
+
             <div class="system-card">
                 <div class="system-image" style="background-image: url('https://images.unsplash.com/photo-1620749331044-0c3f0d0e7b7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
                     <div class="system-icon"><i class="fas fa-water"></i></div>
@@ -86,7 +47,7 @@
                 </div>
             </div>
             
-            <!-- الري بالرش -->
+
             <div class="system-card">
                 <div class="system-image" style="background-image: url('https://images.unsplash.com/photo-1598439210629-976473b18d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
                     <div class="system-icon"><i class="fas fa-cloud-rain"></i></div>
@@ -107,7 +68,7 @@
                 </div>
             </div>
             
-            <!-- الري بالتنقيط -->
+
             <div class="system-card">
                 <div class="system-image" style="background-image: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
                     <div class="system-icon"><i class="fas fa-tint"></i></div>
@@ -129,7 +90,7 @@
             </div>
         </div>
 
-        <!-- قسم كفاءة المياه -->
+
         <div class="efficiency-section">
             <h2>Water Efficiency Innovations</h2>
             <p>Jordan leads in water conservation technologies despite limited resources</p>
@@ -156,10 +117,13 @@
         </div>
     </div>
 
-    <!-- الفوتر -->
+
     <footer class="footer">
-        <p>© 2024 Jordanian Food Security. All rights reserved.</p>
+        <p>Â© 2024 Jordanian Food Security. All rights reserved.</p>
     </footer>
     <script src="index.js"></script>
 </body>
 </html>
+
+
+
