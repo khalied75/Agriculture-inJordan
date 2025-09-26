@@ -3,31 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Irrigation systems in Jordan</title>
+        <!-- icon -->
+     <link rel="icon" href="../img/logo.png">
     <!-- css -->
-     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="../main.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- الناف بار - تصميم أزرق مائي -->
+   <!-- الناف بار - إنجليزية فقط وإزالة النص بجانب الأيقونة -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon">
-                    <img src="../img/logo.png" alt="JFS Icon" style="width: 40px; height: 40px; border-radius: 8px;">
+            <a href="#home" class="logo">
+                <!-- هنا يمكنك إضافة صورتك -->
+                <div class="logo-icon" style="display: flex; align-items: center;">
+                    <img src="../img/logo.png" alt="JFS Icon" style="width: 80px">
                 </div>
+                <div class="logo-text"></div> <!-- نص مخفي -->
             </a>
             
             <ul class="nav-links">
-                <li><a href=".C:\Users\khkh7\OneDrive\Documents\GitHub\Agriculture-inJordan\index.html">Home</a></li>
-                <li><a href="agriculture-statistics.html">Agriculture Stats</a></li>
-                <li><a href="irrigation-systems.html" class="active">Irrigation Systems</a></li>
-                <li><a href="crops.html">Crops</a></li>
-                <li><a href="plants.html">Plants</a></li>
-                <li><a href="vertical-farming.html">Vertical Farming</a></li>
-                <li><a href="plant-diseases.html">Plant Diseases</a></li>
+                <li><a href="../types of agriculture used in Jordan/index.html">Agriculture Stats</a></li>
+                <li><a href="../Irrigation systems  in Jordan/index.html">Irrigation Systems</a></li>
+                <li><a href="../Available or rare crops/index.html">Crops</a></li>
+                <li><a href="../Available or rare plants/index.html">Plants</a></li>
+                <li><a href="../Vertical farming/index.html">Vertical Farming</a></li>
+                <li><a href="../Plant diseases/index.html">Plant Diseases</a></li>
             </ul>
             
+            <!-- زر الهامبرغر -->
             <button class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -39,21 +44,19 @@
     <!-- قائمة الموبايل -->
     <div class="overlay" id="overlay"></div>
     <div class="mobile-menu" id="mobileMenu">
-        <button class="close-btn" id="closeBtn">×</button>
         <ul class="mobile-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="agriculture-statistics.html">Agriculture Stats</a></li>
-            <li><a href="irrigation-systems.html" class="active">Irrigation Systems</a></li>
-            <li><a href="crops.html">Crops</a></li>
-            <li><a href="plants.html">Plants</a></li>
-            <li><a href="vertical-farming.html">Vertical Farming</a></li>
-            <li><a href="plant-diseases.html">Plant Diseases</a></li>
+                <li><a href="../types of agriculture used in Jordan/index.html">Agriculture Stats</a></li>
+                <li><a href="../Irrigation systems  in Jordan/index.html">Irrigation Systems</a></li>
+                <li><a href="../Available or rare crops/index.html">Crops</a></li>
+                <li><a href="../Available or rare plants/index.html">Plants</a></li>
+                <li><a href="../Vertical farming/index.html">Vertical Farming</a></li>
+                <li><a href="../Plant diseases/index.html">Plant Diseases</a></li>
         </ul>
     </div>
 
-    <!-- الهيرو سيكشن -->
-    <section class="page-hero">
-        <div class="page-hero-content">
+        <!-- الهيرو سيكشن -->
+    <section class="hero" id="home" style="background: var(--water-gradient);">
+        <div class="hero-content">
             <h1>Irrigation Systems in Jordan</h1>
             <p>Innovative water management solutions sustaining agriculture in arid regions</p>
         </div>
