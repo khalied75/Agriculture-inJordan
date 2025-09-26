@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css -->
+     <link rel="stylesheet" href="index.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- الناف بار - تصميم أزرق مائي -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="img/WhatsApp Image 2025-09-25 at 23.25.05_97f73a6b.jpg" alt="JFS Icon" style="width: 40px; height: 40px; border-radius: 8px;">
+                </div>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href=".C:\Users\khkh7\OneDrive\Documents\GitHub\Agriculture-inJordan\index.html">Home</a></li>
+                <li><a href="agriculture-statistics.html">Agriculture Stats</a></li>
+                <li><a href="irrigation-systems.html" class="active">Irrigation Systems</a></li>
+                <li><a href="crops.html">Crops</a></li>
+                <li><a href="plants.html">Plants</a></li>
+                <li><a href="vertical-farming.html">Vertical Farming</a></li>
+                <li><a href="plant-diseases.html">Plant Diseases</a></li>
+            </ul>
+            
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- قائمة الموبايل -->
+    <div class="overlay" id="overlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" id="closeBtn">×</button>
+        <ul class="mobile-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="agriculture-statistics.html">Agriculture Stats</a></li>
+            <li><a href="irrigation-systems.html" class="active">Irrigation Systems</a></li>
+            <li><a href="crops.html">Crops</a></li>
+            <li><a href="plants.html">Plants</a></li>
+            <li><a href="vertical-farming.html">Vertical Farming</a></li>
+            <li><a href="plant-diseases.html">Plant Diseases</a></li>
+        </ul>
+    </div>
+
+    <!-- الهيرو سيكشن -->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <h1>Irrigation Systems in Jordan</h1>
+            <p>Innovative water management solutions sustaining agriculture in arid regions</p>
+        </div>
+    </section>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="container">
+        <div class="systems-grid">
+            <!-- الري السطحي -->
+            <div class="system-card">
+                <div class="system-image" style="background-image: url('https://images.unsplash.com/photo-1620749331044-0c3f0d0e7b7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+                    <div class="system-icon"><i class="fas fa-water"></i></div>
+                </div>
+                <div class="system-content">
+                    <h3>Surface Irrigation</h3>
+                    <p>Traditional method where water is distributed over the soil surface by gravity. Commonly used in the Jordan Valley for field crops like wheat and barley.</p>
+                    <div class="system-stats">
+                        <div class="stat">
+                            <span class="stat-value">35%</span>
+                            <span class="stat-label">Usage</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">60%</span>
+                            <span class="stat-label">Efficiency</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- الري بالرش -->
+            <div class="system-card">
+                <div class="system-image" style="background-image: url('https://images.unsplash.com/photo-1598439210629-976473b18d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+                    <div class="system-icon"><i class="fas fa-cloud-rain"></i></div>
+                </div>
+                <div class="system-content">
+                    <h3>Sprinkler Irrigation</h3>
+                    <p>Water is distributed through a system of pipes and sprayed into the air to simulate rainfall. Ideal for vegetable farms in the highlands.</p>
+                    <div class="system-stats">
+                        <div class="stat">
+                            <span class="stat-value">25%</span>
+                            <span class="stat-label">Usage</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">75%</span>
+                            <span class="stat-label">Efficiency</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- الري بالتنقيط -->
+            <div class="system-card">
+                <div class="system-image" style="background-image: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+                    <div class="system-icon"><i class="fas fa-tint"></i></div>
+                </div>
+                <div class="system-content">
+                    <h3>Drip Irrigation</h3>
+                    <p>Most efficient system where water drips slowly to plant roots. Widely adopted in Jordan for fruit trees and greenhouse cultivation.</p>
+                    <div class="system-stats">
+                        <div class="stat">
+                            <span class="stat-value">40%</span>
+                            <span class="stat-label">Usage</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">90%</span>
+                            <span class="stat-label">Efficiency</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم كفاءة المياه -->
+        <div class="efficiency-section">
+            <h2>Water Efficiency Innovations</h2>
+            <p>Jordan leads in water conservation technologies despite limited resources</p>
+            
+            <div class="efficiency-content">
+                <div class="efficiency-item">
+                    <div class="efficiency-icon"><i class="fas fa-recycle"></i></div>
+                    <h3>Water Recycling</h3>
+                    <p>Advanced treatment systems allow reuse of 85% of agricultural wastewater</p>
+                </div>
+                
+                <div class="efficiency-item">
+                    <div class="efficiency-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Smart Irrigation</h3>
+                    <p>IoT sensors and AI optimize water usage based on soil moisture and weather</p>
+                </div>
+                
+                <div class="efficiency-item">
+                    <div class="efficiency-icon"><i class="fas fa-solar-panel"></i></div>
+                    <h3>Solar-Powered Systems</h3>
+                    <p>Renewable energy reduces operational costs and environmental impact</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <p>© 2024 Jordanian Food Security. All rights reserved.</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
