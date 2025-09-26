@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- icon -->
+     <link rel="icon" href="img/WhatsApp Image 2025-09-25 at 23.25.05_97f73a6b.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordanian food security</title>
+    <!-- css -->
+     <link rel="stylesheet" href="index.css">
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+     <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="img/WhatsApp Image 2025-09-25 at 23.25.05_97f73a6b.jpg" alt="JFS Icon" style="width: 40px; height: 40px; border-radius: 8px;">
+                </div>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="agriculture-statistics.html" class="active">Agriculture Stats</a></li>
+                <li><a href="irrigation-systems.html">Irrigation Systems</a></li>
+                <li><a href="crops.html">Crops</a></li>
+                <li><a href="plants.html">Plants</a></li>
+                <li><a href="vertical-farming.html">Vertical Farming</a></li>
+                <li><a href="plant-diseases.html">Plant Diseases</a></li>
+            </ul>
+            
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- قائمة الموبايل - تم الإصلاح -->
+    <div class="overlay" id="overlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" id="closeBtn">×</button>
+        <ul class="mobile-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="agriculture-statistics.html" class="active">Agriculture Stats</a></li>
+            <li><a href="irrigation-systems.html">Irrigation Systems</a></li>
+            <li><a href="crops.html">Crops</a></li>
+            <li><a href="plants.html">Plants</a></li>
+            <li><a href="vertical-farming.html">Vertical Farming</a></li>
+            <li><a href="plant-diseases.html">Plant Diseases</a></li>
+        </ul>
+    </div>
+
+    <!-- المحتوى -->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <h1>Agriculture Statistics in Jordan</h1>
+            <p>Comprehensive data and insights into Jordan's agricultural landscape</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="intro-text">
+            <p>Jordan's agricultural sector represents a cornerstone of the nation's economy and food security. The following data reveals the resilience and potential of Jordanian agriculture.</p>
+        </div>
+
+        <div class="stats-highlights">
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-tractor"></i></div>
+                <div class="stat-value">4.2%</div>
+                <div class="stat-label">Contribution to GDP</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-users"></i></div>
+                <div class="stat-value">15.7%</div>
+                <div class="stat-label">Of Workforce Employed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="stat-value">+3.5%</div>
+                <div class="stat-label">Annual Growth Rate</div>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-container">
+                <h3 class="chart-title">Agricultural Land Distribution</h3>
+                <div class="chart-wrapper">
+                    <canvas id="landChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <h3 class="chart-title">Crop Production Trends</h3>
+                <div class="chart-wrapper">
+                    <canvas id="productionChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>Historical Context & Future Projections</h2>
+            <div class="info-content">
+                <p>Jordan's agricultural history is a testament to human ingenuity in the face of geographical challenges. From ancient water management systems to modern precision agriculture, the sector has continuously evolved.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2024 Jordanian Food Security. All rights reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

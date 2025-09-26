@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap');
- :root {
+:root {
             --primary: #2e7d32;
             --primary-light: #4caf50;
             --secondary: #ff9800;
@@ -31,6 +30,7 @@
             padding-top: 80px;
         }
         
+        /* النافبار المعدل - إنجليزية فقط وإزالة النص */
         .navbar {
             background: var(--gradient);
             padding: 0;
