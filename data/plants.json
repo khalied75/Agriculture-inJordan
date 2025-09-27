@@ -1,0 +1,506 @@
+{
+  "Available plants": [
+    {
+      "name": "Rose",
+      "icon": "🌹",
+      "description": "Flowering plant known for its beauty and fragrance."
+    },
+    {
+      "name": "Tulip",
+      "icon": "🌷",
+      "description": "Spring-blooming flower with colorful petals."
+    },
+    {
+      "name": "Sunflower",
+      "icon": "🌻",
+      "description": "Tall plant with a large yellow flower head."
+    },
+    {
+      "name": "Daisy",
+      "icon": "🌼",
+      "description": "Small flower with white petals and yellow center."
+    },
+    {
+      "name": "Lily",
+      "icon": "🌸",
+      "description": "Flowering plant with large fragrant blooms."
+    },
+    {
+      "name": "Orchid",
+      "icon": "🌺",
+      "description": "Exotic flowering plant with diverse shapes."
+    },
+    {
+      "name": "Jasmine",
+      "icon": "🌼",
+      "description": "Fragrant flowering shrub used in perfumes."
+    },
+    {
+      "name": "Lavender",
+      "icon": "💜",
+      "description": "Aromatic herb with purple flowers."
+    },
+    {
+      "name": "Bamboo",
+      "icon": "🎍",
+      "description": "Fast-growing woody grass used in construction."
+    },
+    {
+      "name": "Cactus",
+      "icon": "🌵",
+      "description": "Desert plant adapted to store water."
+    },
+    {
+      "name": "Fern",
+      "icon": "🌿",
+      "description": "Non-flowering plant with feathery leaves."
+    },
+    {
+      "name": "Moss",
+      "icon": "🌱",
+      "description": "Small green plant growing in moist places."
+    },
+    {
+      "name": "Aloe Vera",
+      "icon": "🌿",
+      "description": "Succulent plant with medicinal uses."
+    },
+    {
+      "name": "Ivy",
+      "icon": "🌿",
+      "description": "Climbing plant with evergreen leaves."
+    },
+    {
+      "name": "Basil",
+      "icon": "🌿",
+      "description": "Aromatic herb used in cooking."
+    },
+    {
+      "name": "Mint",
+      "icon": "🌿",
+      "description": "Herb with refreshing scent and taste."
+    },
+    {
+      "name": "Parsley",
+      "icon": "🌿",
+      "description": "Herb used as garnish and flavoring."
+    },
+    {
+      "name": "Coriander",
+      "icon": "🌿",
+      "description": "Herb with edible leaves and seeds."
+    },
+    {
+      "name": "Thyme",
+      "icon": "🌿",
+      "description": "Herb with small aromatic leaves."
+    },
+    {
+      "name": "Sage",
+      "icon": "🌿",
+      "description": "Herb with gray-green leaves."
+    },
+    {
+      "name": "Oregano",
+      "icon": "🌿",
+      "description": "Mediterranean herb for seasoning."
+    },
+    {
+      "name": "Chamomile",
+      "icon": "🌼",
+      "description": "Flowering herb used in tea."
+    },
+    {
+      "name": "Hibiscus",
+      "icon": "🌺",
+      "description": "Flowering plant with large blooms."
+    },
+    {
+      "name": "Marigold",
+      "icon": "🌼",
+      "description": "Brightly colored ornamental plant."
+    },
+    {
+      "name": "Peony",
+      "icon": "🌸",
+      "description": "Flowering plant with large blossoms."
+    },
+    {
+      "name": "Carnation",
+      "icon": "🌸",
+      "description": "Flower with fringed petals."
+    },
+    {
+      "name": "Lotus",
+      "icon": "🌸",
+      "description": "Aquatic plant with sacred symbolism."
+    },
+    {
+      "name": "Water Lily",
+      "icon": "🌸",
+      "description": "Floating aquatic flowering plant."
+    },
+    {
+      "name": "Palm",
+      "icon": "🌴",
+      "description": "Tropical tree with large leaves."
+    },
+    {
+      "name": "Oak",
+      "icon": "🌳",
+      "description": "Large tree producing acorns."
+    },
+    {
+      "name": "Pine",
+      "icon": "🌲",
+      "description": "Coniferous tree with needle leaves."
+    },
+    {
+      "name": "Cedar",
+      "icon": "🌲",
+      "description": "Fragrant coniferous tree."
+    },
+    {
+      "name": "Maple",
+      "icon": "🍁",
+      "description": "Tree known for sweet sap and autumn leaves."
+    },
+    {
+      "name": "Birch",
+      "icon": "🌳",
+      "description": "Tree with white bark and small leaves."
+    },
+    {
+      "name": "Willow",
+      "icon": "🌳",
+      "description": "Tree with drooping branches."
+    },
+    {
+      "name": "Elm",
+      "icon": "🌳",
+      "description": "Deciduous tree with broad leaves."
+    },
+    {
+      "name": "Ash",
+      "icon": "🌳",
+      "description": "Tree used for timber."
+    },
+    {
+      "name": "Cypress",
+      "icon": "🌲",
+      "description": "Tall evergreen tree."
+    },
+    {
+      "name": "Spruce",
+      "icon": "🌲",
+      "description": "Coniferous tree with conical shape."
+    },
+    {
+      "name": "Fir",
+      "icon": "🌲",
+      "description": "Tree used as Christmas tree."
+    },
+    {
+      "name": "Eucalyptus",
+      "icon": "🌿",
+      "description": "Australian tree with aromatic leaves."
+    },
+    {
+      "name": "Acacia",
+      "icon": "🌳",
+      "description": "Tree common in arid regions."
+    },
+    {
+      "name": "Baobab",
+      "icon": "🌳",
+      "description": "Tree with massive trunk in Africa."
+    },
+    {
+      "name": "Mangrove",
+      "icon": "🌱",
+      "description": "Tree adapted to coastal wetlands."
+    },
+    {
+      "name": "Olive Tree",
+      "icon": "🫒",
+      "description": "Tree producing olives."
+    },
+    {
+      "name": "Apple Tree",
+      "icon": "🍏",
+      "description": "Tree bearing apples."
+    },
+    {
+      "name": "Pear Tree",
+      "icon": "🍐",
+      "description": "Tree producing pears."
+    },
+    {
+      "name": "Peach Tree",
+      "icon": "🍑",
+      "description": "Tree producing peaches."
+    },
+    {
+      "name": "Plum Tree",
+      "icon": "🍑",
+      "description": "Tree bearing plums."
+    },
+    {
+      "name": "Cherry Tree",
+      "icon": "🍒",
+      "description": "Tree with cherries and blossoms."
+    },
+    {
+      "name": "Banana Plant",
+      "icon": "🍌",
+      "description": "Large tropical plant bearing bananas."
+    },
+    {
+      "name": "Mango Tree",
+      "icon": "🥭",
+      "description": "Tree producing mango fruit."
+    },
+    {
+      "name": "Papaya Plant",
+      "icon": "🟠",
+      "description": "Tropical plant with edible fruit."
+    },
+    {
+      "name": "Guava Tree",
+      "icon": "🥭",
+      "description": "Tree producing guavas."
+    },
+    {
+      "name": "Pomegranate Tree",
+      "icon": "🍎",
+      "description": "Tree producing pomegranates."
+    },
+    {
+      "name": "Fig Tree",
+      "icon": "🟤",
+      "description": "Tree bearing figs."
+    },
+    {
+      "name": "Date Palm",
+      "icon": "🌴",
+      "description": "Palm tree producing dates."
+    },
+    {
+      "name": "Coconut Palm",
+      "icon": "🥥",
+      "description": "Palm producing coconuts."
+    },
+    {
+      "name": "Grapevine",
+      "icon": "🍇",
+      "description": "Climbing plant producing grapes."
+    },
+    {
+      "name": "Strawberry Plant",
+      "icon": "🍓",
+      "description": "Small plant producing strawberries."
+    },
+    {
+      "name": "Blueberry Bush",
+      "icon": "🫐",
+      "description": "Shrub producing blueberries."
+    },
+    {
+      "name": "Raspberry Bush",
+      "icon": "🍓",
+      "description": "Shrub producing raspberries."
+    },
+    {
+      "name": "Blackberry Bush",
+      "icon": "🍇",
+      "description": "Shrub producing blackberries."
+    },
+    {
+      "name": "Kiwi Vine",
+      "icon": "🥝",
+      "description": "Climbing plant producing kiwis."
+    },
+    {
+      "name": "Dragon Fruit Cactus",
+      "icon": "🐉",
+      "description": "Cactus producing dragon fruit."
+    },
+    {
+      "name": "Durian Tree",
+      "icon": "🟡",
+      "description": "Tropical tree producing durians."
+    },
+    {
+      "name": "Jackfruit Tree",
+      "icon": "🟢",
+      "description": "Tree producing jackfruit."
+    },
+    {
+      "name": "Starfruit Tree",
+      "icon": "⭐",
+      "description": "Tree producing star-shaped fruit."
+    },
+    {
+      "name": "Lychee Tree",
+      "icon": "🍒",
+      "description": "Tree producing lychees."
+    },
+    {
+      "name": "Longan Tree",
+      "icon": "🍒",
+      "description": "Tree producing longans."
+    }
+  ],
+  "Rare plants": [
+    {
+      "name": "Passionfruit Vine",
+      "icon": "🟣",
+      "description": "Climbing plant with passionfruit."
+    },
+    {
+      "name": "Vanilla Orchid",
+      "icon": "🤍",
+      "description": "Orchid producing vanilla pods."
+    },
+    {
+      "name": "Peppermint",
+      "icon": "🌿",
+      "description": "Hybrid mint plant."
+    },
+    {
+      "name": "Spearmint",
+      "icon": "🌿",
+      "description": "Common mint variety."
+    },
+    {
+      "name": "Rosemary",
+      "icon": "🌿",
+      "description": "Aromatic herb with needle-like leaves."
+    },
+    {
+      "name": "Bay Laurel",
+      "icon": "🌿",
+      "description": "Tree with aromatic leaves used in cooking."
+    },
+    {
+      "name": "Nettle",
+      "icon": "🌿",
+      "description": "Stinging plant with medicinal uses."
+    },
+    {
+      "name": "Dandelion",
+      "icon": "🌼",
+      "description": "Flowering weed with yellow blooms."
+    },
+    {
+      "name": "Clover",
+      "icon": "☘️",
+      "description": "Small plant symbolizing luck."
+    },
+    {
+      "name": "Alfalfa",
+      "icon": "🌱",
+      "description": "Forage crop plant."
+    },
+    {
+      "name": "Sorghum Grass",
+      "icon": "🌱",
+      "description": "Grass used for fodder."
+    },
+    {
+      "name": "Lemongrass",
+      "icon": "🌿",
+      "description": "Herb with citrus flavor."
+    },
+    {
+      "name": "Chili Plant",
+      "icon": "🌶️",
+      "description": "Plant bearing chili peppers."
+    },
+    {
+      "name": "Bell Pepper Plant",
+      "icon": "🫑",
+      "description": "Plant bearing bell peppers."
+    },
+    {
+      "name": "Eggplant Plant",
+      "icon": "🍆",
+      "description": "Plant producing eggplants."
+    },
+    {
+      "name": "Tomato Plant",
+      "icon": "🍅",
+      "description": "Plant producing tomatoes."
+    },
+    {
+      "name": "Potato Plant",
+      "icon": "🥔",
+      "description": "Plant producing potatoes."
+    },
+    {
+      "name": "Carrot Plant",
+      "icon": "🥕",
+      "description": "Plant producing carrots."
+    },
+    {
+      "name": "Onion Plant",
+      "icon": "🧅",
+      "description": "Plant producing onions."
+    },
+    {
+      "name": "Garlic Plant",
+      "icon": "🧄",
+      "description": "Plant producing garlic."
+    },
+    {
+      "name": "Cucumber Plant",
+      "icon": "🥒",
+      "description": "Plant producing cucumbers."
+    },
+    {
+      "name": "Zucchini Plant",
+      "icon": "🥒",
+      "description": "Plant producing zucchinis."
+    },
+    {
+      "name": "Pumpkin Plant",
+      "icon": "🎃",
+      "description": "Plant producing pumpkins."
+    },
+    {
+      "name": "Squash Plant",
+      "icon": "🟠",
+      "description": "Plant producing squashes."
+    },
+    {
+      "name": "Okra Plant",
+      "icon": "🟢",
+      "description": "Plant producing okra."
+    },
+    {
+      "name": "Spinach Plant",
+      "icon": "🥬",
+      "description": "Leafy green plant."
+    },
+    {
+      "name": "Kale Plant",
+      "icon": "🥬",
+      "description": "Superfood leafy green."
+    },
+    {
+      "name": "Broccoli Plant",
+      "icon": "🥦",
+      "description": "Plant producing broccoli."
+    },
+    {
+      "name": "Cauliflower Plant",
+      "icon": "🥦",
+      "description": "Plant producing cauliflower."
+    },
+    {
+      "name": "Brussels Sprout Plant",
+      "icon": "🥦",
+      "description": "Plant producing Brussels sprouts."
+    }
+  ]
+}

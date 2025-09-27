@@ -1,26 +1,49 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="../main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crops</title>
-        <!-- icon -->
-    <link rel="icon" href="../img/logo.png">
+    <link rel="icon" href="../img/logo.png" />
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="./index.css" />
     <script src="../components/navbar.js" defer data-base=".."></script>
+    <script src="../components/footer.js" defer data-base=".."></script>
+    <script src="../components/scroll-progress.js" defer></script>
+    <script src="./index.js" defer></script>
 </head>
 
 <body>
     <div data-component="navbar"></div>
+
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>JORDANIAN FOOD SECURITY</h1>
-            <p>Ensuring sustainable food production and availability for future generations in the Hashemite Kingdom of Jordan</p>
+            <h1>Available or rare crops</h1>
+            <p>This classification highlights Jordan’s agricultural diversity and supports sustainable farming by encouraging the preservation of rare species and the expansion of widely available crops.</p>
         </div>
     </section>
+
+    <main class="container">
+        <header class="toolbar">
+            <input id="search" type="search" placeholder="Search crop name..." aria-label="Search by name" />
+            <select id="rarity" aria-label="Filter by rarity">
+                <option value="all">All</option>
+                <option value="available">Available</option>
+                <option value="rare">Rare</option>
+            </select>
+            <span id="count" class="count" aria-live="polite"></span>
+        </header>
+
+        <section id="grid" class="cards-grid" aria-live="polite"></section>
+        <nav id="pagination" class="pagination" aria-label="Pagination"></nav>
+    </main>
+
+    <div data-component="footer"></div>
 </body>
 </html>
+
+
 
 
 

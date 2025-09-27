@@ -1,8 +1,10 @@
-﻿<nav class="navbar">
+﻿    <div id="scroll-progress"></div>
+    <div data-component="navbar"></div>
+<nav class="navbar">
   <div class="nav-container">
-    <a href="#home" class="logo">
+    <a href="#" class="logo" data-path="index.html">
       <div class="logo-icon" style="display: flex; align-items: center;">
-        <img data-src="img/logo.png" alt="JFS Icon" style="width: 80px">
+        <img data-src="img/logo.png" alt="JFS Icon" style="width: 65px">
       </div>
       <div class="logo-text"></div>
     </a>
@@ -16,11 +18,18 @@
       <li><a data-path="Plant diseases/index.html">Plant Diseases</a></li>
     </ul>
 
-    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <div class="nav-actions">
+      <button class="theme-toggle theme-toggle--desktop" type="button" aria-label="Toggle color mode">
+        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">🔆</span>
+        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">🌑</span>
+      </button>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </div>
 </nav>
 
@@ -32,6 +41,15 @@
     <li><a data-path="Available or rare crops/index.html">Crops</a></li>
     <li><a data-path="Available or rare plants/index.html">Plants</a></li>
     <li><a data-path="Vertical farming/index.html">Vertical Farming</a></li>
-    <li><a data-path="Plant diseases/index.html">Plant Diseases</a></li>
+    <li><a data-path="Plant�diseases/index.html">Plant Diseases</a></li>
   </ul>
+
+  <div class="mobile-actions">
+    <button class="theme-toggle theme-toggle--mobile" type="button" aria-label="Toggle color mode">
+      <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀️</span>
+      <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">🌙</span>
+      <span class="theme-toggle__label">Light mode</span>
+    </button>
+  </div>
 </div>
+

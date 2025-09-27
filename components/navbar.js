@@ -1,7 +1,97 @@
 ﻿(function () {
   const PROJECT_NAME = 'Agriculture-inJordan';
+  const THEME_STORAGE_KEY = 'agri-theme-preference';
+  const themeState = {
+    toggles: [],
+    current: 'light',
+    hasExplicitPreference: false,
+  };
+
   const scriptElement = document.currentScript;
   const explicitBasePath = scriptElement && scriptElement.dataset ? scriptElement.dataset.base : '';
+
+  function getStoredTheme() {
+    try {
+      return localStorage.getItem(THEME_STORAGE_KEY);
+    } catch (error) {
+      console.warn('[navbar] Unable to read theme preference from storage:', error);
+      return null;
+    }
+  }
+
+  function persistTheme(theme) {
+    try {
+      localStorage.setItem(THEME_STORAGE_KEY, theme);
+      themeState.hasExplicitPreference = true;
+    } catch (error) {
+      console.warn('[navbar] Unable to persist theme preference:', error);
+    }
+  }
+
+  function prefersDarkMode() {
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+
+  function getPreferredTheme() {
+    const stored = getStoredTheme();
+    if (stored === 'light' || stored === 'dark') {
+      themeState.hasExplicitPreference = true;
+      return stored;
+    }
+    return prefersDarkMode() ? 'dark' : 'light';
+  }
+
+  function updateToggleState() {
+    if (!themeState.toggles.length) {
+      return;
+    }
+
+    const ariaLabel = themeState.current === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+    const labelText = themeState.current === 'dark' ? 'Light mode' : 'Dark mode';
+
+    themeState.toggles.forEach((toggle) => {
+      toggle.setAttribute('data-theme', themeState.current);
+      toggle.setAttribute('aria-label', ariaLabel);
+      toggle.setAttribute('title', ariaLabel);
+      const label = toggle.querySelector('.theme-toggle__label');
+      if (label) {
+        label.textContent = labelText;
+      }
+    });
+  }
+
+  function applyTheme(theme) {
+    themeState.current = theme;
+    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.classList.toggle('theme-dark', theme === 'dark');
+    updateToggleState();
+    window.dispatchEvent(new CustomEvent('theme:change', { detail: { theme } }));
+  }
+
+  function setTheme(theme, persist = true) {
+    if (persist) {
+      persistTheme(theme);
+    }
+    applyTheme(theme);
+  }
+
+  const initialTheme = getPreferredTheme();
+  applyTheme(initialTheme);
+
+  if (window.matchMedia) {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (event) => {
+      if (!themeState.hasExplicitPreference) {
+        applyTheme(event.matches ? 'dark' : 'light');
+      }
+    };
+
+    if (typeof mediaQuery.addEventListener === 'function') {
+      mediaQuery.addEventListener('change', handleChange);
+    } else if (typeof mediaQuery.addListener === 'function') {
+      mediaQuery.addListener(handleChange);
+    }
+  }
 
   function computeBasePath() {
     if (explicitBasePath) {
@@ -120,6 +210,7 @@
     });
 
     setupInteractions();
+    initializeThemeToggle();
     window.dispatchEvent(new CustomEvent('navbar:ready'));
   }
 
@@ -148,6 +239,16 @@
       document.body.style.overflow = 'auto';
     };
 
+    const updateNavbarSurface = () => {
+      if (window.scrollY > 100) {
+        navbar.style.background = 'var(--navbar-surface)';
+        navbar.style.backdropFilter = 'blur(10px)';
+      } else {
+        navbar.style.background = '';
+        navbar.style.backdropFilter = '';
+      }
+    };
+
     hamburger.addEventListener('click', toggleMenu);
     overlay.addEventListener('click', closeMenu);
     mobileLinks.forEach((link) => {
@@ -160,19 +261,45 @@
       }
     });
 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(46, 125, 50, 0.95)';
-        navbar.style.backdropFilter = 'blur(10px)';
-      } else {
-        navbar.style.background = '';
-        navbar.style.backdropFilter = '';
+    window.addEventListener('scroll', updateNavbarSurface);
+    window.addEventListener('theme:change', updateNavbarSurface);
+    updateNavbarSurface();
+  }
+
+  function initializeThemeToggle() {
+    const toggles = Array.from(document.querySelectorAll('.theme-toggle'));
+    if (!toggles.length) {
+      return;
+    }
+
+    themeState.toggles = toggles;
+    updateToggleState();
+
+    const closeMobileMenuIfOpen = () => {
+      const mobileMenu = document.getElementById('mobileMenu');
+      const overlay = document.getElementById('overlay');
+      const hamburger = document.getElementById('hamburger');
+      if (!mobileMenu || !overlay || !hamburger) {
+        return;
       }
+      if (mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        hamburger.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    };
+
+    toggles.forEach((button) => {
+      button.addEventListener('click', () => {
+        const nextTheme = themeState.current === 'dark' ? 'light' : 'dark';
+        setTheme(nextTheme);
+        if (button.classList.contains('theme-toggle--mobile')) {
+          closeMobileMenuIfOpen();
+        }
+      });
     });
   }
 
   document.addEventListener('DOMContentLoaded', loadNavbar);
 })();
-
-
-

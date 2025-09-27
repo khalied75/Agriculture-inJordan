@@ -1,81 +1,69 @@
 ﻿<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordanian food security</title>
-    <link rel="stylesheet" href="./index.css">
+    <title>Jordanian Food Security</title>
     <link rel="stylesheet" href="./main.css">
-    <!-- icon -->
+    <link rel="stylesheet" href="./index.css">
     <link rel="icon" href="img/logo.png">
     <script src="./components/navbar.js" defer data-base="."></script>
+    <script src="./components/footer.js" defer data-base="."></script>
+    <script src="../components/scroll-progress.js" defer></script>
 </head>
 <body>
-   <!-- الناف بار - إنجليزية فقط وإزالة النص بجانب الأيقونة -->
     <div data-component="navbar"></div>
 
-    <!-- الهيرو سيكشن -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>JORDANIAN FOOD SECURITY</h1>
-            <p>Ensuring sustainable food production and availability for future generations in the Hashemite Kingdom of Jordan</p>
+            <h1>Jordanian Food Security Platform</h1>
+            <p>Unified access to statistics, irrigation methods, key crops and plants, vertical farming initiatives, and plant health programs across Jordan.</p>
         </div>
     </section>
 
-    <!-- المحتوى الرئيسي -->
     <div class="container">
         <div class="sections-grid">
-            <!-- إحصاءات الزراعة -->
             <div class="section-card" id="agriculture-stats">
                 <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
                 <h3>Agriculture Statistics in Jordan</h3>
-                <p>Comprehensive data and statistics about agricultural methods and practices used across different regions of Jordan, highlighting trends and innovations.</p>
+                <p>Explore historical and current indicators covering land usage, productivity, workforce participation, and regional performance trends.</p>
             </div>
-            
-            <!-- أنظمة الري -->
+
             <div class="section-card" id="irrigation">
                 <div class="card-icon"><i class="fas fa-tint"></i></div>
                 <h3>Irrigation Systems in Jordan</h3>
-                <p>Overview of modern and traditional irrigation techniques implemented in Jordan's agricultural sector, including drip irrigation and smart water management.</p>
+                <p>Dive into smart irrigation strategies, desert farming pilots, and national programs that optimise every drop of water.</p>
             </div>
-            
-            <!-- المحاصيل -->
+
             <div class="section-card" id="crops">
                 <div class="card-icon"><i class="fas fa-apple-alt"></i></div>
                 <h3>Available and Rare Crops</h3>
-                <p>Information about diverse range of crops cultivated in Jordan, including both commonly available and rare species suited to Jordan's unique climate.</p>
+                <p>Review staple and speciality crops that sustain food supply chains and open export opportunities for the kingdom.</p>
             </div>
-            
-            <!-- النباتات -->
+
             <div class="section-card" id="plants">
                 <div class="card-icon"><i class="fas fa-leaf"></i></div>
                 <h3>Available and Rare Plants</h3>
-                <p>Details about plant species in Jordan, including native plants, cultivated species, and rare botanical specimens important for biodiversity.</p>
+                <p>Catalogue medicinal, aromatic, and endangered plants with guidance on conservation and sustainable cultivation.</p>
             </div>
-            
-            <!-- الزراعة العمودية -->
+
             <div class="section-card" id="vertical">
                 <div class="card-icon"><i class="fas fa-arrow-up"></i></div>
                 <h3>Vertical Farming</h3>
-                <p>Innovative vertical farming solutions being implemented in Jordan for sustainable agriculture in urban environments and limited spaces.</p>
+                <p>Discover innovation hubs and mixed-use facilities pioneering controlled-environment agriculture in Jordanian cities.</p>
             </div>
-            
-            <!-- أمراض النباتات -->
+
             <div class="section-card" id="diseases">
                 <div class="card-icon"><i class="fas fa-bug"></i></div>
                 <h3>Plant Diseases</h3>
-                <p>Information about common plant diseases affecting Jordan's agriculture, along with prevention methods and treatment solutions.</p>
+                <p>Stay ahead of emerging plant health risks through integrated pest management dashboards and early-warning alerts.</p>
             </div>
         </div>
-
-       
     </div>
 
-    <!-- الفوتر -->
-    <footer class="footer">
-        <p>© 2024 Jordanian Food Security. All rights reserved.</p>
-    </footer>
+    <div data-component="footer"></div>
     <script src="index.js"></script>
 </body>
 </html>
+
 

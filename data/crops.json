@@ -1,0 +1,506 @@
+{
+  "Available crops": [
+    {
+      "name": "Wheat",
+      "icon": "🌾",
+      "description": "Cereal crop used for flour and bread."
+    },
+    {
+      "name": "Rice",
+      "icon": "🍚",
+      "description": "Staple grain grown in paddies worldwide."
+    },
+    {
+      "name": "Corn",
+      "icon": "🌽",
+      "description": "Versatile crop used for food, feed, and fuel."
+    },
+    {
+      "name": "Barley",
+      "icon": "🌾",
+      "description": "Cereal grain used in food and brewing."
+    },
+    {
+      "name": "Oats",
+      "icon": "🥣",
+      "description": "Nutritious cereal for porridge and feed."
+    },
+    {
+      "name": "Tomato",
+      "icon": "🍅",
+      "description": "Fruit-vegetable used in salads and sauces."
+    },
+    {
+      "name": "Potato",
+      "icon": "🥔",
+      "description": "Tuber crop rich in starch."
+    },
+    {
+      "name": "Carrot",
+      "icon": "🥕",
+      "description": "Root vegetable high in beta-carotene."
+    },
+    {
+      "name": "Onion",
+      "icon": "🧅",
+      "description": "Bulb vegetable used for flavoring."
+    },
+    {
+      "name": "Garlic",
+      "icon": "🧄",
+      "description": "Aromatic bulb with culinary and medicinal uses."
+    },
+    {
+      "name": "Cabbage",
+      "icon": "🥬",
+      "description": "Leafy vegetable eaten raw or cooked."
+    },
+    {
+      "name": "Lettuce",
+      "icon": "🥬",
+      "description": "Leafy green for salads."
+    },
+    {
+      "name": "Spinach",
+      "icon": "🥬",
+      "description": "Nutritious leafy green rich in iron."
+    },
+    {
+      "name": "Cucumber",
+      "icon": "🥒",
+      "description": "Refreshing vegetable often in salads."
+    },
+    {
+      "name": "Pepper",
+      "icon": "🫑",
+      "description": "Vegetable available in many colors."
+    },
+    {
+      "name": "Chili",
+      "icon": "🌶️",
+      "description": "Spicy fruit used in cooking."
+    },
+    {
+      "name": "Peas",
+      "icon": "🟢",
+      "description": "Legume eaten fresh or dried."
+    },
+    {
+      "name": "Beans",
+      "icon": "🫘",
+      "description": "Protein-rich legume."
+    },
+    {
+      "name": "Soybean",
+      "icon": "🫘",
+      "description": "Legume used for oil and tofu."
+    },
+    {
+      "name": "Lentils",
+      "icon": "🟤",
+      "description": "Nutritious legume high in protein."
+    },
+    {
+      "name": "Strawberry",
+      "icon": "🍓",
+      "description": "Sweet red berry fruit."
+    },
+    {
+      "name": "Grapes",
+      "icon": "🍇",
+      "description": "Fruit eaten fresh or made into wine."
+    },
+    {
+      "name": "Apple",
+      "icon": "🍎",
+      "description": "Popular fruit with many varieties."
+    },
+    {
+      "name": "Pear",
+      "icon": "🍐",
+      "description": "Sweet fruit with soft flesh."
+    },
+    {
+      "name": "Peach",
+      "icon": "🍑",
+      "description": "Juicy stone fruit."
+    },
+    {
+      "name": "Plum",
+      "icon": "🍑",
+      "description": "Stone fruit eaten fresh or dried."
+    },
+    {
+      "name": "Cherry",
+      "icon": "🍒",
+      "description": "Small red stone fruit."
+    },
+    {
+      "name": "Banana",
+      "icon": "🍌",
+      "description": "Tropical fruit rich in potassium."
+    },
+    {
+      "name": "Orange",
+      "icon": "🍊",
+      "description": "Citrus fruit rich in vitamin C."
+    },
+    {
+      "name": "Lemon",
+      "icon": "🍋",
+      "description": "Citrus fruit used for juice."
+    },
+    {
+      "name": "Lime",
+      "icon": "🍋",
+      "description": "Citrus fruit similar to lemon."
+    },
+    {
+      "name": "Pineapple",
+      "icon": "🍍",
+      "description": "Tropical fruit with sweet flavor."
+    },
+    {
+      "name": "Mango",
+      "icon": "🥭",
+      "description": "Tropical stone fruit."
+    },
+    {
+      "name": "Papaya",
+      "icon": "🟠",
+      "description": "Tropical fruit rich in enzymes."
+    },
+    {
+      "name": "Coconut",
+      "icon": "🥥",
+      "description": "Nut fruit with edible flesh and water."
+    },
+    {
+      "name": "Date",
+      "icon": "🌴",
+      "description": "Sweet fruit from date palm."
+    },
+    {
+      "name": "Fig",
+      "icon": "🟤",
+      "description": "Sweet fruit with soft flesh."
+    },
+    {
+      "name": "Pomegranate",
+      "icon": "🍎",
+      "description": "Fruit with red juicy seeds."
+    },
+    {
+      "name": "Melon",
+      "icon": "🍈",
+      "description": "Refreshing sweet fruit."
+    },
+    {
+      "name": "Watermelon",
+      "icon": "🍉",
+      "description": "Large juicy summer fruit."
+    },
+    {
+      "name": "Pumpkin",
+      "icon": "🎃",
+      "description": "Large squash used in soups and pies."
+    },
+    {
+      "name": "Squash",
+      "icon": "🟠",
+      "description": "Vegetable related to pumpkin."
+    },
+    {
+      "name": "Zucchini",
+      "icon": "🥒",
+      "description": "Green summer squash."
+    },
+    {
+      "name": "Eggplant",
+      "icon": "🍆",
+      "description": "Purple vegetable used in cooking."
+    },
+    {
+      "name": "Olives",
+      "icon": "🫒",
+      "description": "Fruit used for oil and pickles."
+    },
+    {
+      "name": "Sunflower",
+      "icon": "🌻",
+      "description": "Oilseed crop with edible seeds."
+    },
+    {
+      "name": "Sesame",
+      "icon": "⚪",
+      "description": "Seed crop used for oil and tahini."
+    },
+    {
+      "name": "Peanut",
+      "icon": "🥜",
+      "description": "Legume used as nut and for oil."
+    },
+    {
+      "name": "Almond",
+      "icon": "🌰",
+      "description": "Nut rich in healthy fats."
+    },
+    {
+      "name": "Walnut",
+      "icon": "🌰",
+      "description": "Nut with hard shell and rich taste."
+    },
+    {
+      "name": "Hazelnut",
+      "icon": "🌰",
+      "description": "Nut used in sweets and spreads."
+    },
+    {
+      "name": "Pistachio",
+      "icon": "🌰",
+      "description": "Nut eaten raw or roasted."
+    },
+    {
+      "name": "Cashew",
+      "icon": "🌰",
+      "description": "Nut used in cooking and sweets."
+    },
+    {
+      "name": "Coffee",
+      "icon": "☕",
+      "description": "Beverage crop from beans."
+    },
+    {
+      "name": "Tea",
+      "icon": "🍵",
+      "description": "Beverage crop from leaves."
+    },
+    {
+      "name": "Cocoa",
+      "icon": "🍫",
+      "description": "Crop used to make chocolate."
+    },
+    {
+      "name": "Sugarcane",
+      "icon": "🍬",
+      "description": "Crop used for sugar production."
+    },
+    {
+      "name": "Cotton",
+      "icon": "🧵",
+      "description": "Fiber crop for textiles."
+    },
+    {
+      "name": "Flax",
+      "icon": "🧵",
+      "description": "Crop for linen and oil."
+    },
+    {
+      "name": "Hops",
+      "icon": "🍺",
+      "description": "Crop used in brewing beer."
+    },
+    {
+      "name": "Mustard",
+      "icon": "🟡",
+      "description": "Seed crop used as spice and oil."
+    },
+    {
+      "name": "Basil",
+      "icon": "🌿",
+      "description": "Herb used in cooking."
+    },
+    {
+      "name": "Mint",
+      "icon": "🌿",
+      "description": "Refreshing herb for drinks."
+    },
+    {
+      "name": "Parsley",
+      "icon": "🌿",
+      "description": "Herb used for flavoring."
+    },
+    {
+      "name": "Coriander",
+      "icon": "🌿",
+      "description": "Herb and spice crop."
+    },
+    {
+      "name": "Thyme",
+      "icon": "🌿",
+      "description": "Aromatic herb used in cooking."
+    },
+    {
+      "name": "Rosemary",
+      "icon": "🌿",
+      "description": "Herb used for flavoring meat."
+    },
+    {
+      "name": "Sage",
+      "icon": "🌿",
+      "description": "Herb with medicinal uses."
+    },
+    {
+      "name": "Dill",
+      "icon": "🌿",
+      "description": "Herb used for pickling."
+    },
+    {
+      "name": "Chickpea",
+      "icon": "🟤",
+      "description": "Legume also called garbanzo."
+    }
+  ],
+  "Rare crops": [
+    {
+      "name": "Turnip",
+      "icon": "🥗",
+      "description": "Root vegetable eaten cooked."
+    },
+    {
+      "name": "Radish",
+      "icon": "🥗",
+      "description": "Spicy root vegetable."
+    },
+    {
+      "name": "Beetroot",
+      "icon": "🟥",
+      "description": "Red root vegetable rich in iron."
+    },
+    {
+      "name": "Celery",
+      "icon": "🥬",
+      "description": "Crunchy stalk vegetable."
+    },
+    {
+      "name": "Okra",
+      "icon": "🟢",
+      "description": "Vegetable used in soups."
+    },
+    {
+      "name": "Ginger",
+      "icon": "🟤",
+      "description": "Spice root with medicinal uses."
+    },
+    {
+      "name": "Turmeric",
+      "icon": "🟠",
+      "description": "Spice root used in cooking."
+    },
+    {
+      "name": "Cardamom",
+      "icon": "🟢",
+      "description": "Spice seed used in sweets."
+    },
+    {
+      "name": "Cinnamon",
+      "icon": "🟤",
+      "description": "Spice from bark."
+    },
+    {
+      "name": "Clove",
+      "icon": "🟤",
+      "description": "Aromatic spice buds."
+    },
+    {
+      "name": "Vanilla",
+      "icon": "🤍",
+      "description": "Spice crop from pods."
+    },
+    {
+      "name": "Black Pepper",
+      "icon": "⚫",
+      "description": "Spice from dried berries."
+    },
+    {
+      "name": "Chili Pepper",
+      "icon": "🌶️",
+      "description": "Hot spice fruit."
+    },
+    {
+      "name": "Quinoa",
+      "icon": "🥗",
+      "description": "Pseudo-cereal rich in protein."
+    },
+    {
+      "name": "Amaranth",
+      "icon": "🥗",
+      "description": "Pseudo-cereal and leafy green."
+    },
+    {
+      "name": "Buckwheat",
+      "icon": "🥗",
+      "description": "Gluten-free pseudo-cereal."
+    },
+    {
+      "name": "Millet",
+      "icon": "🥗",
+      "description": "Small-seeded cereal crop."
+    },
+    {
+      "name": "Sorghum",
+      "icon": "🥗",
+      "description": "Drought-tolerant cereal crop."
+    },
+    {
+      "name": "Rye",
+      "icon": "🥗",
+      "description": "Cereal crop used in bread."
+    },
+    {
+      "name": "Pearl Millet",
+      "icon": "🥗",
+      "description": "Millet variety grown in arid areas."
+    },
+    {
+      "name": "Foxtail Millet",
+      "icon": "🥗",
+      "description": "Ancient millet grain."
+    },
+    {
+      "name": "Finger Millet",
+      "icon": "🥗",
+      "description": "Millet high in calcium."
+    },
+    {
+      "name": "Kale",
+      "icon": "🥬",
+      "description": "Leafy green superfood."
+    },
+    {
+      "name": "Broccoli",
+      "icon": "🥦",
+      "description": "Nutritious vegetable rich in vitamins."
+    },
+    {
+      "name": "Cauliflower",
+      "icon": "🥦",
+      "description": "Vegetable eaten raw or cooked."
+    },
+    {
+      "name": "Brussels Sprouts",
+      "icon": "🥦",
+      "description": "Mini cabbage-like vegetable."
+    },
+    {
+      "name": "Asparagus",
+      "icon": "🥦",
+      "description": "Spring vegetable with tender shoots."
+    },
+    {
+      "name": "Artichoke",
+      "icon": "🥗",
+      "description": "Edible flower bud vegetable."
+    },
+    {
+      "name": "Mushroom",
+      "icon": "🍄",
+      "description": "Fungus used as vegetable."
+    },
+    {
+      "name": "Truffle",
+      "icon": "⚫",
+      "description": "Edible fungus delicacy."
+    }
+  ]
+}
