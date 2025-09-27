@@ -104,7 +104,8 @@
   position: relative;
   z-index: 2;
 }
-  :root {
+/* suggestion */
+ :root {
         --bg-color: #f8f9fa;
         --text-color: #333;
         --card-bg: white;
