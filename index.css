@@ -284,6 +284,7 @@
         transition: border-color 0.3s ease;
         background: var(--card-bg);
         color: var(--text-color);
+        resize: none;
     }
     
     .suggestion-form input::placeholder,
