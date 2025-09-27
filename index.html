@@ -60,6 +60,52 @@
             </div>
         </div>
     </div>
+<!-- Suggestions Section with Dark Mode -->
+<section class="suggestions-section" id="suggestionsSection">
+    <div class="suggestions-container">
+        <!-- Dark Mode Toggle Button -->
+       
+        
+        <h2>Share Your Ideas</h2>
+        <p class="suggestions-subtitle">Help us improve Jordanian agriculture with your suggestions</p>
+        
+        <div class="suggestions-grid">
+            <div class="suggestion-card">
+                <div class="suggestion-icon">💡</div>
+                <h3>Innovation Ideas</h3>
+                <p>Share your creative solutions for sustainable farming</p>
+                <button class="suggestion-btn" onclick="openSuggestionForm('innovation')">Suggest Idea</button>
+            </div>
+            
+            <div class="suggestion-card">
+                <div class="suggestion-icon">🌱</div>
+                <h3>Crop Suggestions</h3>
+                <p>Recommend new crops suitable for Jordan's climate</p>
+                <button class="suggestion-btn" onclick="openSuggestionForm('crops')">Suggest Crop</button>
+            </div>
+            
+            <div class="suggestion-card">
+                <div class="suggestion-icon">💧</div>
+                <h3>Water Solutions</h3>
+                <p>Propose efficient irrigation and water management ideas</p>
+                <button class="suggestion-btn" onclick="openSuggestionForm('water')">Suggest Solution</button>
+            </div>
+        </div>
+        
+        <div class="suggestion-form" id="suggestionForm">
+            <h3>Share Your Suggestion</h3>
+            <form id="suggestionFormContent">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your suggestion..." rows="4" required></textarea>
+                <div class="form-buttons">
+                    <button type="submit" class="submit-btn">Submit Suggestion</button>
+                    <button type="button" class="cancel-btn" onclick="closeSuggestionForm()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
 
     <div data-component="footer"></div>
     <script src="index.js"></script>

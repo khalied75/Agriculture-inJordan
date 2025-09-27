@@ -31,3 +31,32 @@
   document.addEventListener('DOMContentLoaded', setupSmoothScroll);
   window.addEventListener('navbar:ready', setupSmoothScroll);
 })();
+// Suggestion Form Functions
+    function openSuggestionForm(type) {
+        const form = document.getElementById('suggestionForm');
+        form.style.display = 'block';
+        form.scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    function closeSuggestionForm() {
+        document.getElementById('suggestionForm').style.display = 'none';
+        document.getElementById('suggestionFormContent').reset();
+    }
+    
+    // Form Submission
+    document.getElementById('suggestionFormContent').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your suggestion! We will review it soon.');
+        closeSuggestionForm();
+    });
+    
+    // Add hover effects
+    document.querySelectorAll('.suggestion-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.background = 'var(--card-bg)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.background = 'var(--card-bg)';
+        });
+    });
